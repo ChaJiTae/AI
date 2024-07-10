@@ -1,6 +1,6 @@
 import speech_recognition as sr
 
-# 메뉴 리스트
+# 동작 리스트
 menu_list = ["초기 화면", "직원 호출", "결제", "주문","취소"]
 
 def recognize_speech_from_mic():
@@ -12,7 +12,7 @@ def recognize_speech_from_mic():
         audio = recognizer.listen(source)
 
     try:
-        # 구글 음성 인식의 언어를 한국어로 설정
+        # 구글 음성 인식의 언어 : 한국어
         response = recognizer.recognize_google(audio, language="ko-KR")
         print(f"인식된 음성: {response}")
         return response.lower()
@@ -23,6 +23,7 @@ def recognize_speech_from_mic():
         print("음성을 인식할 수 없습니다.")
         return None
 
+# 동작 일치 여부
 def match_menu_order(recognized_text):
     for menu_item in menu_list:
         if menu_item in recognized_text:
