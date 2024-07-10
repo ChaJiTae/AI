@@ -1,7 +1,10 @@
 import speech_recognition as sr
 
 # 동작 리스트
-menu_list = ["초기 화면", "직원 호출", "결제", "주문","취소","아메리카노"]
+# menu_list = ["초기 화면", "직원 호출", "결제", "주문","취소","아메리카노"]
+
+# 메뉴 리스트
+menu_list = ["카푸치노","아메리카노","에소프레소"]
 
 def recognize_speech_from_mic():
     recognizer = sr.Recognizer()
@@ -10,7 +13,6 @@ def recognize_speech_from_mic():
     with mic as source:
         print("주문을 말씀해주세요!")
         audio = recognizer.listen(source)
-
     try:
         # 구글 음성 인식의 언어 : 한국어
         response = recognizer.recognize_google(audio, language="ko-KR")
@@ -20,7 +22,7 @@ def recognize_speech_from_mic():
         print("API를 사용할 수 없거나 응답이 없습니다.")
         return None
     except sr.UnknownValueError:
-        print("음성을 인식할 수 없습니다.")
+        print(f"음성을 인식할 수 없습니다."  )
         return None
 
 # 동작 일치 여부
