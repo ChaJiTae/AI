@@ -31,6 +31,8 @@ def match_menu_order(recognized_text):
     for menu_item in menu_list:
         if menu_item in recognized_text:
             return menu_item
+        else:
+            return recognized_text
     return "일치하는 메뉴 항목이 없습니다."
 
 # 음성 주문 인식 및 매칭
