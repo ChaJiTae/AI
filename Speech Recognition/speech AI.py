@@ -4,7 +4,7 @@ import speech_recognition as sr
 # menu_list = ["초기 화면", "직원 호출", "결제", "주문","취소","아메리카노"]
 
 # 메뉴 리스트
-menu_list = ["카푸치노","아메리카노","에소프레소"]
+menu_list = ["카푸치노","아메리카노","에소프레소","주문 취소"]
 
 def recognize_speech_from_mic():
     recognizer = sr.Recognizer()
