@@ -1,0 +1,15 @@
+# Ignore IDE/Editor files
+.vscode/
+.idea/
+
+# Ignore compiled files
+*.pyc
+*.class
+
+# Ignore log files
+*.log
+
+# Ignore environment files
+.env
+
+.gitattributes

@@ -1,7 +1,7 @@
 import speech_recognition as sr
 
 # 동작 리스트
-menu_list = ["초기 화면", "직원 호출", "결제", "주문","취소"]
+menu_list = ["초기 화면", "직원 호출", "결제", "주문","취소","아메리카노"]
 
 def recognize_speech_from_mic():
     recognizer = sr.Recognizer()
